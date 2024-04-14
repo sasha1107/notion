@@ -2938,6 +2938,7 @@ const emojis = [
   "🪙",
   "💴",
 ];
-export const randomEmoji = () => {
-  return emojis[Math.floor(Math.random() * emojis.length)];
+
+export const getEmoji = (index) => {
+  return emojis[index];
 };

@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-import { randomEmoji } from "./emoji.js";
+import { getEmoji } from "./emoji.js";
 
 config();
 
@@ -9,7 +9,7 @@ export function parseData(data) {
   const paths = data.paths;
 
   const formattedData = [];
-
+  let index = 0;
   for (const path in paths) {
     const methods = paths[path];
     for (const method in methods) {
@@ -25,7 +25,7 @@ export function parseData(data) {
         },
         icon: {
           type: "emoji",
-          emoji: randomEmoji(),
+          emoji: getEmoji(index),
         },
         parent: {
           type: "database_id",
@@ -138,6 +138,7 @@ export function parseData(data) {
 
       formattedData.push(pathData);
     }
+    index++;
   }
 
   return formattedData;
