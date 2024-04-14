@@ -1,0 +1,31 @@
+{
+  "name": "notion-api-docs",
+  "version": "1.0.0",
+  "description": "make api docs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "update": "node src/page.js",
+    "test": "."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasha1107/notion.git"
+  },
+  "keywords": [
+    "notion",
+    "swagger",
+    "api"
+  ],
+  "author": "sasha1107",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sasha1107/notion/issues"
+  },
+  "homepage": "https://github.com/sasha1107/notion#readme",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  }
+}
